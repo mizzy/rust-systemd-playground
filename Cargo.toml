@@ -1,0 +1,6 @@
+[package]
+name = "rust-systemd-playground"
+version = "0.1.0"
+authors = ["Gosuke Miyashita <gosukenator@gmail.com>"]
+
+[dependencies]
