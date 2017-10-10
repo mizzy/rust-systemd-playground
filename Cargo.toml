@@ -3,4 +3,5 @@ name = "rust-systemd-playground"
 version = "0.1.0"
 authors = ["Gosuke Miyashita <gosukenator@gmail.com>"]
 
-[dependencies]
+[target.'cfg(target_os="linux")'.dependencies]
+dbus = "0.5.4"
