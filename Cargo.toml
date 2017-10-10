@@ -4,4 +4,6 @@ version = "0.1.0"
 authors = ["Gosuke Miyashita <gosukenator@gmail.com>"]
 
 [target.'cfg(target_os="linux")'.dependencies]
-dbus = "0.5.4"
+dbus-bytestream = "0.1.4"
+dbus-serialize = "0.1.2"
+rustc-serialize = "0.3.24"
