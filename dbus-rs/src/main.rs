@@ -1,8 +1,6 @@
 extern crate dbus;
 
-use dbus::{Connection, BusType, Message, MessageItem};
-use dbus::arg;
-use dbus::obj::ObjectPath;
+use dbus::{Connection, BusType, Message, Path};
 
 fn main() {
     let c = Connection::get_private(BusType::System).unwrap();
@@ -13,7 +11,7 @@ fn main() {
         .unwrap()
         .append1("ssh.service");
     let r = c.send_with_reply_and_block(m, 2000).unwrap();
-    let o: arg::Path = r.read1().unwrap();
+    let o: Path = r.read1().unwrap();
 
-    println!("{:?}", r);
+    println!("{}", o);
 }
